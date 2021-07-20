@@ -1,10 +1,12 @@
-const localFunction = function() {
-    alert("Local function run!");
+const localFunction = function(event) {
+    if(event.data === "messageToIframe") {
+        console.log("Local function run!");
+    }
 }
 
 /* Test event listener with message iframe > parent */
 const checkParentMessaging = () => {
-    parent.postMessage('foo','*')
+    parent.postMessage('messageToParent','*')
 }
 
 /* Test tunneling methods to iframe */
@@ -14,7 +16,7 @@ const checkParentTunneling = () => {
 
 const receiveMessage = (event) => {
     if(event) {
-        localFunction();
+        localFunction(event);
     }
 }
 
