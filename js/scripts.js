@@ -25,5 +25,5 @@ const receiveMessage = (event) => {
 
 /* Test event listener with message iframe > parent */
 const checkParentMessaging = () => {
-    window.parent.postMessage('foo','*')
+    parent.postMessage('foo','*')
 }
