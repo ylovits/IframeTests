@@ -30,7 +30,7 @@ const receiveMessage = (event) => {
         document.body.appendChild(pElement);
     }
 }
-/* TEvent listener to test messaging parent > iframe */
+/* Event listener to test messaging parent > iframe */
 window.addEventListener("message", receiveMessage, false);
  
 
